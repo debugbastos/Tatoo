@@ -1,0 +1,74 @@
+.manifesto__texto {
+  font-family: var(--f-serif);
+  font-weight: 400;
+  font-size: clamp(2.125rem, 1.2rem + 3.9vw, 5.5rem);
+  line-height: 1.04;
+  letter-spacing: -0.012em;
+  max-width: 19em;
+}
+.manifesto__palavra {
+  display: inline-block;
+  white-space: nowrap;
+  margin-right: 0.22em; /* o espaço entre palavras (o de dentro do inline-block some) */
+}
+.manifesto__palavra [data-u] {
+  color: var(--dim);
+  transition: color 0.35s;
+}
+.manifesto__palavra .aceso {
+  color: var(--fg);
+}
+.manifesto__foto {
+  display: inline-block;
+  width: 1.7em;
+  height: 0.82em;
+  margin: 0 0.18em 0 0;
+  vertical-align: -0.04em;
+  border-radius: 999px;
+  overflow: hidden;
+  background: var(--surface);
+  opacity: 0.25;
+  transform: scale(0.85);
+  transition:
+    opacity 0.6s var(--e-out),
+    transform 0.8s var(--e-out);
+}
+.manifesto__foto.aceso {
+  opacity: 1;
+  transform: none;
+}
+.manifesto__foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(0.4);
+}
+.manifesto__autor {
+  margin-top: 2.4em;
+}
+
+.manifesto__info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+  gap: 0 var(--gap);
+  margin-top: clamp(64px, 12vh, 140px);
+  border-top: 1px solid var(--line);
+}
+.manifesto__info > div {
+  padding: 1.2em 0;
+  border-bottom: 1px solid var(--line);
+}
+.manifesto__info dt {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+  margin-bottom: 0.6em;
+}
+.manifesto__info dd {
+  font-size: var(--t-body);
+  line-height: 1.45;
+  color: var(--fg-2);
+}
+.manifesto__hora {
+  display: block;
+}

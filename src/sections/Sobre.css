@@ -1,0 +1,160 @@
+/* Sobre: fotos e texto lado a lado (a partir do tablet); embaixo, especialidades e diferenciais. */
+.sobre {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--gap);
+  row-gap: clamp(64px, 9vw, 140px);
+}
+.sobre__fotos {
+  grid-column: 1 / span 6;
+  position: relative;
+  align-self: start;
+  padding-bottom: 14%;
+}
+.sobre__retrato {
+  width: 76%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background: var(--surface);
+}
+.sobre__retrato img,
+.sobre__estrada img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.sobre__retrato img {
+  object-position: 40% 25%;
+  filter: grayscale(1) contrast(1.05);
+  transition:
+    filter 1s,
+    transform 1.8s var(--e-out);
+}
+.sobre__retrato:hover img {
+  filter: grayscale(0);
+}
+.sobre__estrada {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 40%;
+}
+.sobre__estrada img {
+  aspect-ratio: 3 / 4;
+  object-position: 50% 40%;
+  filter: grayscale(0.5);
+}
+.sobre__estrada figcaption {
+  margin-top: 0.8em;
+}
+.sobre__texto {
+  grid-column: 8 / span 5;
+  align-self: center;
+}
+.sobre__bio {
+  display: grid;
+  gap: 0.25em;
+  margin-top: 1.6em;
+}
+.sobre__depoimento {
+  margin-top: clamp(28px, 3vw, 44px);
+  padding-left: 1.1em;
+  border-left: 1px solid var(--fg);
+}
+.sobre__depoimento p {
+  font-family: var(--f-serif);
+  font-style: italic;
+  font-size: clamp(1.375rem, 1.1rem + 0.9vw, 2rem);
+  line-height: 1.2;
+  color: var(--fg);
+}
+.sobre__depoimento footer {
+  margin-top: 1em;
+}
+.sobre__ideia {
+  margin-top: clamp(24px, 2.6vw, 36px);
+}
+
+/* especialidades + diferenciais */
+.sobre__detalhes {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(0, 4fr) minmax(0, 8fr);
+  gap: clamp(36px, 4vw, 64px) var(--gap);
+  padding-top: clamp(36px, 4vw, 64px);
+  border-top: 1px solid var(--line);
+}
+.sobre__esp h3 {
+  font-weight: 400;
+}
+.sobre__esp ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 1.2em;
+}
+.sobre__esp li {
+  padding: 0.45em 0.95em;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: var(--t-small);
+}
+.sobre__dif {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(28px, 3vw, 48px) var(--gap);
+}
+.sobre__dif li {
+  display: grid;
+  align-content: start;
+  gap: 0.45em;
+  padding-top: 1em;
+  border-top: 1px solid var(--line);
+}
+.sobre__dif-titulo {
+  font-size: var(--t-h3);
+  font-weight: 700;
+  line-height: var(--lh-h3);
+  letter-spacing: -0.02em;
+}
+.sobre__dif p {
+  font-size: var(--t-body);
+  max-width: 34em;
+}
+
+/* tablet: fotos e texto ainda lado a lado, detalhes empilhados */
+@media (max-width: 1023px) {
+  .sobre__fotos {
+    grid-column: 1 / span 5;
+  }
+  .sobre__texto {
+    grid-column: 7 / span 6;
+  }
+  .sobre__detalhes {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+/* celular: uma coluna */
+@media (max-width: 639px) {
+  .sobre {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 56px;
+  }
+  .sobre__fotos,
+  .sobre__texto,
+  .sobre__detalhes {
+    grid-column: 1 / -1;
+  }
+  .sobre__fotos {
+    padding-bottom: 22%;
+  }
+  .sobre__retrato {
+    width: 72%;
+  }
+  .sobre__estrada {
+    width: 44%;
+  }
+  .sobre__dif {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

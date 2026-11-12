@@ -1,0 +1,105 @@
+/* Tokens do site — paleta monocromática do conceito Traço.
+   A cor vem das fotos; a interface fica em preto, cinzas e off-white. */
+
+/* ---------- fontes (arquivos locais, só com os caracteres do português) ---------- */
+/* Títulos e nome gigante: condensada, de cartaz — lembra letreiro e flash de tatuagem. */
+@font-face {
+  font-family: 'Big Shoulders';
+  src: url('../assets/fontes/big-shoulders-700.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+/* Frases e citações: serifada fina, o "traço fino" da tipografia. */
+@font-face {
+  font-family: 'Instrument Serif';
+  src: url('../assets/fontes/instrument-serif-400.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Instrument Serif';
+  src: url('../assets/fontes/instrument-serif-400-italico.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+/* Texto corrido e interface. */
+@font-face {
+  font-family: 'Instrument Sans';
+  src: url('../assets/fontes/instrument-sans-400.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Instrument Sans';
+  src: url('../assets/fontes/instrument-sans-700.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+/* Etiquetas, números e o painel da sessão. */
+@font-face {
+  font-family: 'Geist Mono';
+  src: url('../assets/fontes/geist-mono-400.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Geist Mono';
+  src: url('../assets/fontes/geist-mono-700.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  --bg: #050505;
+  --surface: #0d0d0d;
+  --surface-2: #141414;
+  --line: #262626;
+  --dim: #333333;
+  --fg: #f3f3f0;
+  --fg-2: #d9d9d6;
+  --muted: #8f8f8b;
+  --giant: #a3a3a3;
+  --ink: #0b0b0b;
+  --stencil: #6d63b8;
+
+  /* ---------- famílias ---------- */
+  --f-display: 'Big Shoulders', 'Arial Narrow', 'Roboto Condensed', Impact, sans-serif;
+  --f-serif: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+  --f-text: 'Instrument Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --f-mono: 'Geist Mono', ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+
+  /* ---------- escala tipográfica (fluida de 360px a 1600px) ----------
+     Só estes tamanhos existem no site. Cada um tem um papel:
+     label  etiquetas em mono (menu, legendas, rótulos)
+     small  textos de apoio, notas
+     body   texto corrido
+     lead   parágrafo de abertura de seção
+     h3     títulos de cartão, passo, pergunta
+     quote  frases em serifa (hero, manifesto, depoimento)
+     h2     títulos de seção (condensada, caixa-alta)          */
+  --t-label: 0.75rem;
+  --t-small: 0.875rem;
+  --t-body: clamp(1rem, 0.96rem + 0.17vw, 1.125rem);
+  --t-lead: clamp(1.1875rem, 1.04rem + 0.62vw, 1.625rem);
+  --t-h3: clamp(1.3125rem, 1.16rem + 0.68vw, 1.875rem);
+  --t-quote: clamp(2rem, 1.32rem + 3vw, 4.375rem);
+  --t-h2: clamp(3.5rem, 2.05rem + 6.4vw, 9.5rem);
+
+  --lh-h2: 0.86;
+  --lh-quote: 1.04;
+  --lh-h3: 1.15;
+  --lh-lead: 1.38;
+  --lh-body: 1.6;
+
+  /* ---------- espaços ---------- */
+  --m: clamp(20px, 4vw, 56px); /* margem lateral */
+  --max: 1680px; /* largura máxima do conteúdo */
+  --gap: clamp(14px, 1.5vw, 24px); /* entre colunas */
+  --sec-y: clamp(88px, 3.4rem + 7vw, 184px); /* respiro vertical de cada seção */
+  --topo-y: clamp(40px, 1.5rem + 3.5vw, 96px); /* do cabeçalho da seção ao conteúdo */
+  --nav-h: clamp(64px, 5.5vw, 80px);
+
+  --e-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --e-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+}

@@ -1,0 +1,11 @@
+Use the attached image ONLY as the reference for pose, crop, framing and light. Make a new photograph of the same kind of forearm in the same position.
+
+Fine art black and white studio photograph, low-key light from the upper left, deep blacks, soft natural highlights, fine film grain. A bare human forearm (light skin, adult, androgynous, slim) raised diagonally: the loosely closed fist at the top center of the frame, the wrist just below it, and the forearm running diagonally down and to the right until it leaves the frame through the bottom edge, right of center. The INNER side of the forearm faces the camera and is evenly lit, smooth and wide, a clean flat area of skin in the middle of the forearm where a 9 cm tattoo will be drawn later. Realistic skin with fine pores and a few faint veins near the wrist.
+
+IMPORTANT: the skin is completely clean. No tattoo, no drawing, no ink, no marks, no stencil. No gloved hand, no tattoo machine, no other hands, no objects. Only this one arm.
+
+Composition (horizontal 1536x1024): the arm occupies a diagonal band through the center (fist around x 420-780 at the top, forearm leaving the bottom edge around x 900-1300), leaving large empty areas on the left and on the right for a giant word that will sit behind the arm.
+
+Background: completely transparent (PNG with alpha channel), with a clean, precise edge around the arm. If transparency is impossible, use a perfectly flat pure black #000000 background.
+
+No text, no letters, no logos, no watermark.

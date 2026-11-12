@@ -1,0 +1,14 @@
+.nome {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+.nome__cheio {
+  fill: currentColor;
+}
+.nome__contorno {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: var(--nome-traco, 8);
+  stroke-linejoin: round;
+}

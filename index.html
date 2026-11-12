@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Thalles Silva — Tatuador em Paulo Afonso, BA | Autoral, realismo e fine line</title>
+    <meta
+      name="description"
+      content="Thalles Silva, tatuador no Arcan Studio Tattoo, em Paulo Afonso (BA). Projetos autorais, realismo, fine line, blackwork e fechamentos. Orçamento pelo WhatsApp (75) 98848-7070."
+    />
+    <meta name="theme-color" content="#050505" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:title" content="Thalles Silva — Tatuador em Paulo Afonso, BA" />
+    <meta property="og:description" content="Projetos autorais, realismo e fine line no Arcan Studio Tattoo. Orçamento pelo WhatsApp." />
+    <meta property="og:image" content="/og.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- As fontes ficam no próprio projeto (src/assets/fontes): nada de servidor externo. -->
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "TattooParlor",
+        "name": "Thalles Silva — Arcan Studio Tattoo",
+        "description": "Tatuador em Paulo Afonso (BA): projetos autorais, realismo e fine line.",
+        "telephone": "+55 75 98848-7070",
+        "image": "/og.jpg",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Av. Beira Rio, Jardim Bahia",
+          "addressLocality": "Paulo Afonso",
+          "addressRegion": "BA",
+          "postalCode": "48602-000",
+          "addressCountry": "BR"
+        },
+        "sameAs": ["https://www.instagram.com/thallestattoofc/"],
+        "employee": { "@type": "Person", "name": "Thalles Silva", "jobTitle": "Tatuador" }
+      }
+    </script>
+
+    <script>
+      // Estado inicial antes do React: classe "js" e, sem pedido de movimento reduzido, a intro.
+      (function () {
+        var h = document.documentElement;
+        h.classList.add('js');
+        if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) h.classList.add('intro');
+        // Segurança: se o JavaScript não carregar, nada fica escondido.
+        setTimeout(function () {
+          if (!h.classList.contains('intro-run')) h.classList.remove('intro', 'js');
+        }, 4000);
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>
+      <p style="padding: 24px; font-family: system-ui; color: #f3f3f0; background: #050505">
+        Thalles Silva — Tatuador no Arcan Studio Tattoo, Av. Beira Rio, Jardim Bahia, Paulo Afonso (BA). Orçamento pelo WhatsApp
+        (75) 98848-7070 · Instagram @thallestattoofc.
+      </p>
+    </noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
